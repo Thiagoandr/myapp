@@ -1,21 +1,28 @@
-import { StyleSheet } from 'react-native';
+import { Text, View } from 'react-native';
 
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+export default function App() {
+    return (
+        <View style={{
+            flex: 1,
+            backgroundColor: '#131016',
+            padding: 24
+        }}>
+            <Text style={{
+                color: '#fff',
+                fontSize: 24,
+                fontWeight: 'bold',
+                marginTop: 48,
+            }}>
+                Nome do evento
+            </Text>
 
-export default function HomeScreen() {
-  return (
-    <ThemedView style={styles.container}>
-      <ThemedText>Hello World!</ThemedText>
-    </ThemedView>
-  );
+            <Text style={{
+                color: '#6b6b6b',
+                fontSize: 16,
+                marginTop: 5, 
+            }}>
+                Domingo, 1/08/2024
+            </Text>
+        </View>
+    );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
-
